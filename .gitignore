@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Firebase cache
+.firebase/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db

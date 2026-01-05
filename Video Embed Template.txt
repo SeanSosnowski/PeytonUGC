@@ -1,0 +1,5 @@
+ {
+                embedId: '8SSks0S_Tyw',
+                title: 'Kindle Ad (Testimonial)',
+                caption: 'Niche: Reading | Style: Authentic voiceover, realistic aesthetic.'
+            },
