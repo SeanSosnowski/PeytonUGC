@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peyton Cranston | UGC Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <style>
+        :root {
+            /* Soft Color Palette */
+            --color-primary: #FDFCFB; 
+            --color-secondary: #FDEEEE; 
+            --color-accent: #E879F9; 
+            --color-text: #333333; 
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary);
+            color: var(--color-text);
+        }
+        .section-container {
+            padding-top: 80px;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .elegant-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.05em;
+        }
+        /* Video aspect ratio for 9:16 (vertical content) */
+        .video-wrapper-vertical {
+            position: relative;
+            width: 100%;
+            padding-bottom: 177.77%;
+            height: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            border-radius: 0.75rem;
+        }
+        .video-wrapper-vertical iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 left-0 w-full z-20 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <h1 class="text-2xl sm:text-3xl elegant-title font-extrabold text-pink-500">
+                Peyton Cranston UGC
+            </h1>
+            <div class="flex space-x-4">
+                <button onclick="scrollToSection('portfolio')" class="nav-link bg-pink-50 text-pink-500 px-4 py-2 rounded-full hover:bg-pink-100 transition duration-150 font-semibold text-sm hidden sm:block">Portfolio</button>
+                <button onclick="scrollToSection('contact')" class="nav-link text-white bg-pink-500 px-6 py-2 rounded-full hover:bg-pink-600 transition duration-150 font-semibold cta-button text-sm">
+                    Contact Me
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-container">
+        
+        <section id="profile" class="bg-secondary py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                
+                <div class="flex justify-center mb-6">
+                    <img src="./Peyton-profile-s.jpg" alt="Peyton Cranston" class="w-48 h-48 object-cover rounded-full shadow-xl border-4 border-white">
+                </div>
+
+                <h2 class="text-4xl elegant-title font-bold text-gray-900 mb-2">Peyton Cranston</h2>
+                <h3 class="text-xl font-semibold text-pink-500 uppercase tracking-wide mb-2">UGC Creator</h3>
+                
+                <p class="text-gray-600 mb-6 flex justify-center items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-pink-400"></i> Virginia Beach, VA
+                </p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.instagram.com/pey_cranston.ugc?igsh=MWphbnIzNW5rcTBrdg%3D%3D&utm_source=qr" target="_blank" class="hover:scale-110 transition duration-300">
+                        <img src="./instagram.svg" alt="Instagram" class="w-8 h-8">
+                    </a>
+                    <a href="https://x.com/pey_cranstonugc?s=11" target="_blank" class="hover:scale-110 transition duration-300">
+                        <img src="./x.png" alt="X" class="w-8 h-8">
+                    </a>
+                    <a href="https://www.tiktok.com/@pey_cranston.ugc?_t=ZT-90w4ex04syk&_r=1" target="_blank" class="hover:scale-110 transition duration-300">
+                        <img src="./tiktok.svg" alt="TikTok" class="w-8 h-8">
+                    </a>
+                </div>
+
+                <a href="mailto:peycranstonugc@gmail.com" class="inline-block bg-pink-500 text-white px-10 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-pink-600 hover:shadow-xl transition duration-300">
+                    <i class="far fa-envelope mr-2"></i> Email Me
+                </a>
+
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl elegant-title font-bold text-gray-900 mb-4">Video Portfolio</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Authentic, engaging content designed to stop the scroll and drive conversions.
+                    </p>
+                </div>
+
+                <div id="video-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-pink-50">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-pink-100">
+                    <h2 class="text-3xl elegant-title font-bold text-center text-pink-500 mb-8">About Me</h2>
+                    
+                    <ul class="space-y-4 text-lg text-gray-700 leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-heart"></i></span>
+                            Married (willing to do couples content!)
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-child"></i></span>
+                            Toddler mom thriving off routine and good vibes
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-paw"></i></span>
+                            2 dogs in the household enthusiastic to try out new stuff
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-book-open"></i></span>
+                            Hobbies (especially the gym and reading) are my happy place
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-sun"></i></span>
+                            Love new experiences and to be outdoors, but also love my bed
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl elegant-title font-bold text-gray-900 mb-6">Let's Collaborate</h2>
+                <p class="text-xl text-gray-600 mb-10">
+                    Ready to create some magic for your brand? Reach out via email or DM!
+                </p>
+
+                <div class="bg-gray-50 p-10 rounded-3xl shadow-inner inline-block w-full max-w-2xl">
+				<a href="mailto:peycranstonugc@gmail.com" class="inline-block bg-pink-500 text-white px-10 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-pink-600 hover:shadow-xl transition duration-300">
+                    <i class="far fa-envelope mr-2"></i> Email Me
+                </a>
+                    </div>
+
+                    <hr class="border-gray-200 my-8 w-1/2 mx-auto">
+
+                    <div class="flex justify-center items-center space-x-8">
+                        <a href="https://www.instagram.com/pey_cranston.ugc?igsh=MWphbnIzNW5rcTBrdg%3D%3D&utm_source=qr" target="_blank" class="flex flex-col items-center hover:opacity-75 transition">
+                            <img src="./instagram.svg" alt="Instagram" class="w-10 h-10 mb-2">
+                            <span class="text-xs font-semibold text-gray-500">Instagram</span>
+                        </a>
+                        <a href="https://x.com/pey_cranstonugc?s=11" target="_blank" class="flex flex-col items-center hover:opacity-75 transition">
+                            <img src="./x.png" alt="X" class="w-10 h-10 mb-2">
+                            <span class="text-xs font-semibold text-gray-500">X / Twitter</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@pey_cranston.ugc?_t=ZT-90w4ex04syk&_r=1" target="_blank" class="flex flex-col items-center hover:opacity-75 transition">
+                            <img src="./tiktok.svg" alt="TikTok" class="w-10 h-10 mb-2">
+                            <span class="text-xs font-semibold text-gray-500">TikTok</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2025 Peyton Cranston UGC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // =========================================================
+        // VIDEO CONFIGURATION (EDIT HERE)
+        // =========================================================
+        // Add your videos here.
+        // embedId: The code at the end of a Youtube URL
+        // style: e.g. "Testimonial", "Aesthetic", "Unboxing"
+        // niche: e.g. "Beauty", "Home", "Wellness"
+        const videoConfig = [
+            {
+                embedId: '-gpre0HqRwI', 
+                title: 'Storage Bags',
+                style: 'Skit',
+                niche: 'Housekeeping'
+            },
+            {
+                embedId: 'qNsC-a4ZyjQ', 
+                title: 'Kindle',
+                style: 'Product Demo',
+                niche: 'Reading'
+            },
+			{
+                embedId: '82tK5_HUv2w', 
+                title: 'Dogs',
+                style: 'Testimonial',
+                niche: 'Animals'
+            },
+			{
+                embedId: 'qV7Wv5xiv4U', 
+                title: 'Creatine',
+                style: 'Greenscreen',
+                niche: 'Health and Wellness'
+            },
+			{
+                embedId: '63-p4xoMJMQ', 
+                title: 'Ninja Cafe',
+                style: 'B-Roll w/ Voiceover',
+                niche: 'Coffee'
+            }
+			
+            // Add more blocks above this line to add more videos
+        ];
+        
+        // =========================================================
+        // SCROLL FUNCTION
+        // =========================================================
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // =========================================================
+        // RENDER PORTFOLIO
+        // =========================================================
+        function renderPortfolio() {
+            const grid = document.getElementById('video-grid');
+            if (!grid) return; 
+
+            let htmlContent = '';
+            
+            videoConfig.forEach(video => {
+                // If ID is missing, skip
+                if(!video.embedId || video.embedId === 'VIDEO_ID_HERE') return;
+
+                htmlContent += `
+                    <div class="video-card bg-white p-3 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 border border-gray-100">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-md font-semibold">${video.style}</span>
+                            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-md font-semibold">${video.niche}</span>
+                        </div>
+                        
+                        <div class="video-wrapper-vertical mb-3">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+                                src="https://www.youtube.com/embed/${video.embedId}?controls=1&modestbranding=1&rel=0" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <p class="text-center font-bold text-gray-800 text-sm">${video.title}</p>
+                    </div>
+                `;
+            });
+
+            // If no videos are configured yet, show a placeholder message
+            if (htmlContent === '') {
+                grid.innerHTML = `<p class="col-span-4 text-center text-gray-400 italic">Portfolio content loading...</p>`;
+            } else {
+                grid.innerHTML = htmlContent;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPortfolio();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peyton Cranston | UGC Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter and Playfair Display fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/cdk+vFvJ5S9/d4W1m5w7oFz3y2uA7xXq0F6L8zWjR1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w2WjJ1w7998317-a068-45b6-ae38-958444a7065f" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            /* Soft Color Palette */
+            --color-primary: #FDFCFB; /* Creamy White Background */
+            --color-secondary: #FDEEEE; /* Blush Pink Light Background */
+            --color-accent: #E879F9; /* Vibrant Pink Accent */
+            --color-text: #333333; /* Dark Gray Text */
+            --color-subtle: #A3A3A3; /* Light Gray for captions */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary);
+            color: var(--color-text);
+        }
+        .section-container {
+            padding-top: 80px; /* Space for fixed header */
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .elegant-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.05em;
+        }
+        /* Video aspect ratio for 9:16 (vertical content) */
+        .video-wrapper-vertical {
+            position: relative;
+            width: 100%;
+            padding-bottom: 177.77%; /* 9:16 Aspect Ratio (16/9 * 100%) */
+            height: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            border-radius: 0.75rem;
+        }
+        .video-wrapper-vertical iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-20 bg-white shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <h1 class="text-3xl elegant-title font-extrabold text-pink-500">
+                Peyton Cranston UGC
+            </h1>
+            <div class="flex space-x-4">
+                <!-- Button calling JS function for smooth scroll to Portfolio -->
+                <button onclick="scrollToSection('portfolio-start')" class="nav-link bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition duration-150 font-semibold cta-button hidden sm:block">Portfolio</button>
+                
+                <!-- Button calling JS function for smooth scroll to Contact Form -->
+                <button onclick="scrollToSection('contact-start')" class="nav-link text-white bg-pink-500 px-6 py-2 rounded-full hover:bg-pink-600 transition duration-150 font-semibold cta-button">
+                    Inquire Now
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content-container" class="section-container">
+        
+        <!-- ============================================== -->
+        <!-- 1. ABOUT ME (The Landing Section) -->
+        <!-- ============================================== -->
+        <section id="about-me" class="bg-secondary py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start bg-white p-8 rounded-3xl shadow-xl shadow-pink-100">
+                    
+                    <!-- Profile Image -->
+		<!-- Profile Image and Corrected Social Media Icons using <img> tags -->
+<div class="flex-shrink-0 flex flex-col items-center">
+    <!-- Profile Image -->
+    <img src="./Peyton-profile-s.jpg" alt="Professional portrait of Peyton Cranston" class="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-pink-200">
+
+    <!-- Social Media Icons (Using Local SVG Files as Images) -->
+    <div class="flex space-x-4 mt-4">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/pey_cranston.ugc?igsh=MWphbnIzNW5rcTBrdg%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram" class="hover:opacity-75 transition duration-300">
+            <img src="./instagram.svg" alt="Instagram Logo" class="w-6 h-6">
+        </a>
+        <!-- X (Twitter) -->
+        <a href="https://x.com/pey_cranstonugc?s=11" target="_blank" aria-label="X (Twitter)" class="hover:opacity-75 transition duration-300">
+            <img src="./x.png" alt="X Logo" class="w-6 h-6">
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@pey_cranston.ugc?_t=ZT-90w4ex04syk&_r=1" target="_blank" aria-label="TikTok" class="hover:opacity-75 transition duration-300">
+            <img src="./tiktok.svg" alt="TikTok Logo" class="w-6 h-6">
+        </a>
+    </div>
+</div>
+					
+					
+
+                    <!-- Short Bio Content (Populated by JS) -->
+                    <div class="flex-grow space-y-3 text-center md:text-left">
+                        <h2 class="text-3xl elegant-title font-bold text-pink-500">Peyton Cranston</h2>
+                        <p id="about-intro" class="text-lg font-semibold text-gray-800"><!-- JS Content --></p>
+                        <p id="about-bio" class="text-gray-600 text-sm"><!-- JS Content --></p>
+                        
+                        <!-- Core Values/Stats (Populated by JS) -->
+                        <div id="about-stats" class="flex justify-center md:justify-start space-x-4 pt-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Anchor for Portfolio Navigation -->
+        <div id="portfolio-start" class="relative -top-20"></div>
+
+        <!-- ============================================== -->
+        <!-- 2. PORTFOLIO (The Main Showcase) -->
+        <!-- ============================================== -->
+        <section id="portfolio" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl elegant-title font-bold text-center mb-4 text-pink-500">Recent Content</h2>
+                
+                <!-- START: EDITABLE PORTFOLIO BLURB -->
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Explore a selection of my best and most authentic user-generated content, showcasing my ability to drive results across beauty, wellness, and lifestyle niches.
+                </p>
+                <!-- END: EDITABLE PORTFOLIO BLURB -->
+
+                <!-- Video Grid (Dynamically populated by JavaScript) -->
+                <div id="video-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Video cards will be inserted here by the script -->
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Anchor for Contact Navigation -->
+        <div id="contact-start" class="relative -top-20"></div>
+
+        <!-- ============================================== -->
+        <!-- 3. CONTACT / INQUIRY FORM -->
+        <!-- ============================================== -->
+        <section id="contact" class="py-16">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl elegant-title font-bold text-center mb-4 text-pink-500">Inquire Now</h2>
+                <p class="text-lg text-center text-gray-600 mb-10">
+                    Please fill out the form below to submit your brief and start our collaboration!
+                </p>
+                
+                <div class="bg-white p-8 rounded-3xl shadow-xl shadow-pink-100">
+                    <!-- Formspree Endpoint Added: This action URL is essential for form submissions -->
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" method="POST" action="https://formspree.io/f/mvgweagv">
+                        
+                        <!-- Success Message Area -->
+                        <div id="success-message" class="hidden p-4 mb-6 text-center text-green-700 bg-green-100 rounded-lg transition duration-300">
+                            Thank you! Your inquiry has been received. I'll be in touch very soon.
+                        </div>
+
+                        <!-- Error Message Area -->
+                        <div id="error-message" class="hidden p-4 mb-6 text-center text-red-700 bg-red-100 rounded-lg transition duration-300">
+                            Oops! Something went wrong with the submission. Please check your details and try again.
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Name & Company (side-by-side on desktop) -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                                </div>
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company / Brand Name</label>
+                                    <input type="text" id="company" name="company" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                                </div>
+                            </div>
+
+                            <!-- Phone & Email (side-by-side on desktop) -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <!-- type="tel" for numeric keypad on mobile -->
+                                    <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <!-- type="email" for browser validation -->
+                                    <input type="email" id="email" name="_replyto" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                                </div>
+                            </div>
+
+                            <!-- Message Box -->
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message / Brief Overview</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition duration-150"></textarea>
+                            </div>
+
+                            <!-- File Attachment Field (Reinstated) -->
+                            
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-button" class="cta-button w-full mt-8 bg-pink-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-600">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm text-gray-400">&copy; 2025 Peyton Cranston UGC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Configuration, Navigation, and API -->
+    <script>
+        // =========================================================
+        // ABOUT PAGE CONFIGURATION (EASY EDITING AREA)
+        // =========================================================
+        const aboutConfig = {
+            introText: "I'm Peyton, and I help brands connect with their audience through genuine, highly engaging video content.",
+            bioText: "A stay-at-home mom of two toddlers, a proud veteran, and a military wife. Between the chaos of mom life and two dogs underfoot, I’ve learned to appreciate products that make life easier, cleaner, and a little more joyful. I create authentic, engaging content that helps brands connect with real families and everyday consumers. My focus is on creating content that doesn't just look pretty—it feels *real*, resonates deeply with consumers, and, most importantly, drives sales.",
+
+        };
+
+        // =========================================================
+        // VIDEO PORTFOLIO CONFIGURATION (EASY EDITING AREA)
+        // =========================================================
+        const videoConfig = [
+            {
+                embedId: '',
+                title: '',
+                caption: ''
+            }
+        ];
+        
+        // =========================================================
+        // NEW: SMOOTH SCROLL FUNCTION
+        // =========================================================
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            }
+        }
+        
+        // =========================================================
+        // UTILITY FUNCTIONS (Rendering, Form)
+        // =========================================================
+
+        function renderPortfolio() {
+            const grid = document.getElementById('video-grid');
+            if (!grid) return; 
+
+            let htmlContent = '';
+            
+            videoConfig.forEach(video => {
+                htmlContent += `
+                    <!-- Video Card: ${video.title} -->
+                    <div class="video-card bg-white p-4 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                        <div class="video-wrapper-vertical">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+                                src="https://www.youtube.com/embed/${video.embedId}?controls=1&modestbranding=1&rel=0" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-lg font-semibold mt-3">${video.title}</p>
+                        <p class="text-sm text-gray-500">${video.caption}</p>
+                    </div>
+                `;
+            });
+
+            grid.innerHTML = htmlContent;
+        }
+
+        function renderAbout() {
+            const intro = document.getElementById('about-intro');
+            const bio = document.getElementById('about-bio');
+            const statsContainer = document.getElementById('about-stats');
+
+            if (intro) intro.innerHTML = aboutConfig.introText;
+            if (bio) bio.innerHTML = aboutConfig.bioText;
+
+            if (statsContainer) {
+                let statsHtml = '';
+                aboutConfig.stats.forEach(stat => {
+                    statsHtml += `
+                        <div class="p-2 px-3 bg-pink-50 rounded-full text-center">
+                            <p class="text-sm font-bold text-pink-500">${stat.value}</p>
+                            <p class="text-xs text-gray-500">${stat.label}</p>
+                        </div>
+                    `;
+                });
+                statsContainer.innerHTML = statsHtml;
+            }
+        }
+        
+        // Form submission handler using AJAX/Fetch for Formspree
+       async function handleFormSubmit(event) {
+    event.preventDefault(); 
+
+    const form = document.getElementById('contact-form');
+    const button = document.getElementById('submit-button');
+    // NOTE: Removed references to successMessage and errorMessage elements
+
+    const actionUrl = form.action;
+    const data = new FormData(form);
+    
+    // Temporarily disable the button for user feedback
+    button.disabled = true;
+    button.textContent = 'Sending...';
+
+    try {
+        // Send the request to Formspree
+        const response = await fetch(actionUrl, {
+            method: 'POST',
+            body: data 
+        });
+
+        // SUCCESS or REDIRECT (2xx or 3xx status)
+        // Since the email is being delivered, we clear the form immediately on success/redirect.
+        if (response.ok || response.status >= 200 && response.status < 400) {
+            form.reset();
+            console.log('Form submission successful (Status: ' + response.status + '). Inputs cleared.');
+        } else {
+            // Log failure, but perform no action on the page
+            console.error('Form submission failed (Status: ' + response.status + '). See response below:');
+            console.error(await response.text());
+        }
+    } catch (error) {
+        // Log network error, but perform no action on the page
+        console.error('[Network Error during Form Submission]', error);
+    } finally {
+        // Re-enable button after a short delay to prevent double-submits
+        setTimeout(() => {
+            button.disabled = false;
+            button.textContent = 'Submit Inquiry';
+        }, 1500); 
+    }
+}
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAbout(); 
+            renderPortfolio();
+        });
+    </script>
+</body>
+</html>
