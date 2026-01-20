@@ -13,19 +13,11 @@
     <style>
         :root {
             /* --- DARK MODE PALETTE --- */
-            /* 1. Backgrounds */
             --color-primary: #121212;
-            /* Main background (Soft Black) */
             --color-secondary: #1E1E1E;
-            /* Cards and Headers (Dark Charcoal) */
-
-            /* 2. Text & Accents */
             --color-accent: #E879F9;
-            /* Pink Accent */
             --color-text: #EDEDED;
-            /* Main Text (Soft White) */
             --color-text-muted: #A1A1AA;
-            /* Secondary Text (Grey) */
         }
 
         body {
@@ -34,28 +26,15 @@
             color: var(--color-text);
         }
 
-        /* --- NEW UTILITY CLASSES --- */
-        /* These link your variables to Tailwind-like classes */
-        .bg-primary {
-            background-color: var(--color-primary);
-        }
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-theme { color: var(--color-text); }
 
-        .bg-secondary {
-            background-color: var(--color-secondary);
-        }
-
-        .text-theme {
-            color: var(--color-text);
-        }
-
-        .section-container {
-            padding-top: 80px;
-        }
+        .section-container { padding-top: 80px; }
 
         .cta-button {
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-            /* Darker shadow for dark mode */
         }
 
         .cta-button:hover {
@@ -76,11 +55,11 @@
             height: 0;
             overflow: hidden;
             background-color: #2a2a2a;
-            /* Darker placeholder */
             border-radius: 0.75rem;
         }
 
-        .video-wrapper-vertical iframe {
+        .video-wrapper-vertical iframe,
+        .video-wrapper-vertical video {
             position: absolute;
             top: 0;
             left: 0;
@@ -153,6 +132,43 @@
             </div>
         </section>
 
+        <section id="intro-about" class="py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+                    
+                    <div id="featured-video-container" class="w-full max-w-sm mx-auto md:max-w-full">
+                        </div>
+
+                    <div class="bg-secondary p-8 md:p-10 rounded-3xl shadow-xl border border-gray-800 h-full flex flex-col justify-center">
+                        <h2 class="text-3xl elegant-title font-bold text-left text-pink-500 mb-6">About Me</h2>
+                        <ul class="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <li class="flex items-start">
+                                <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-heart"></i></span>
+                                Married (willing to do couples content!)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-child"></i></span>
+                                Toddler mom thriving off routine and good vibes
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-paw"></i></span>
+                                2 dogs in the household enthusiastic to try out new stuff
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-book-open"></i></span>
+                                Hobbies, especially the gym and reading, are my happy place
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-sun"></i></span>
+                                Love new experiences and to be outdoors, but also love my bed
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section id="portfolio" class="py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
@@ -163,37 +179,6 @@
                 </div>
 
                 <div id="video-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-16">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-secondary p-8 md:p-12 rounded-3xl shadow-xl border border-gray-800">
-                    <h2 class="text-3xl elegant-title font-bold text-center text-pink-500 mb-8">About Me</h2>
-
-                    <ul class="space-y-4 text-lg text-gray-300 leading-relaxed">
-                        <li class="flex items-start">
-                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-heart"></i></span>
-                            Married (willing to do couples content!)
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-child"></i></span>
-                            Toddler mom thriving off routine and good vibes
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-paw"></i></span>
-                            2 dogs in the household enthusiastic to try out new stuff
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-book-open"></i></span>
-                            Hobbies, especially the gym and reading, are my happy place
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-pink-500 mr-3 mt-1"><i class="fas fa-sun"></i></span>
-                            Love new experiences and to be outdoors, but also love my bed
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -252,7 +237,7 @@
 
     <script>
         // =========================================================
-        // VIDEO CONFIGURATION (EDIT HERE)
+        // VIDEO CONFIGURATION
         // =========================================================
         const videoConfig = [
             {
@@ -304,40 +289,57 @@
         }
 
         // =========================================================
+        // HELPER: Create Video Card HTML
+        // =========================================================
+        function createVideoCard(video, isMainFeature = false) {
+            return `
+                <div class="video-card bg-secondary p-3 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 border border-gray-800 ${isMainFeature ? 'h-full' : ''}">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-gray-800 text-pink-400 text-xs px-2 py-1 rounded-md font-semibold border border-gray-700">${video.style}</span>
+                        <span class="bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded-md font-semibold border border-gray-700">${video.niche}</span>
+                    </div>
+                    
+                    <div class="video-wrapper-vertical mb-3">
+                        <video 
+                            class="absolute top-0 left-0 w-full h-full object-cover rounded-xl shadow-inner"
+                            src="./${video.filename}" 
+                            controls
+                            playsinline
+                            preload="metadata">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <p class="text-center font-bold text-white text-sm">${video.title}</p>
+                </div>
+            `;
+        }
+
+        // =========================================================
         // RENDER PORTFOLIO
         // =========================================================
         function renderPortfolio() {
             const grid = document.getElementById('video-grid');
-            if (!grid) return;
+            const featuredContainer = document.getElementById('featured-video-container');
+            
+            if (!grid || !featuredContainer) return;
 
+            // 1. Find the Intro Video (First item in config)
+            const introVideo = videoConfig.find(v => v.filename === 'Portfolio Intro Video-2.mp4');
+            
+            // 2. Filter out the Intro Video for the main grid
+            const gridVideos = videoConfig.filter(v => v.filename !== 'Portfolio Intro Video-2.mp4');
+
+            // Render Intro Video (Left Side)
+            if (introVideo) {
+                featuredContainer.innerHTML = createVideoCard(introVideo, true);
+            }
+
+            // Render Remaining Videos (Bottom Grid)
             let htmlContent = '';
-
-            videoConfig.forEach(video => {
-                // If ID is missing, skip
+            gridVideos.forEach(video => {
                 if (!video.filename) return;
-
-                // UPDATED JS: Now creates cards with 'bg-secondary' and white text
-                htmlContent += `
-                    <div class="video-card bg-secondary p-3 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300 border border-gray-800">
-                        <div class="flex gap-2 mb-3">
-                            <span class="bg-gray-800 text-pink-400 text-xs px-2 py-1 rounded-md font-semibold border border-gray-700">${video.style}</span>
-                            <span class="bg-gray-800 text-gray-400 text-xs px-2 py-1 rounded-md font-semibold border border-gray-700">${video.niche}</span>
-                        </div>
-                        
-                        <div class="video-wrapper-vertical mb-3">
-                            <video 
-                                class="absolute top-0 left-0 w-full h-full object-cover rounded-xl shadow-inner"
-                                src="./${video.filename}" 
-                                controls
-                                playsinline
-                                preload="metadata">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        
-                        <p class="text-center font-bold text-white text-sm">${video.title}</p>
-                    </div>
-                `;
+                htmlContent += createVideoCard(video);
             });
 
             if (htmlContent === '') {
@@ -352,5 +354,4 @@
         });
     </script>
 </body>
-
 </html>
